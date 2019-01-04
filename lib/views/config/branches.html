@@ -20,6 +20,10 @@
                      type="text" required
                      name="name" placeholder="branch name"
                      class="span4 inline-input"/>
+              <div class="btn-group access-toggle">
+                <button class="btn" type="button" required ng-model="branch_type" btn-radio="'branch'">Branch</button>
+                <button class="btn" type="button" required ng-model="branch_type" btn-radio="'tag'">Tag</button>
+              </div>
               <button class="btn" ng-disabled="!branchForm.$valid" ng-click="add()">Add</button>
           </div>
         </form>
@@ -35,6 +39,7 @@
             ng-repeat="branch in branches"
             ng-sortable-id="[[branch.name]]">
             <span class="remove pull-right">
+              <span class="branch-type">Type: [[branch.branch_type]]</span>
               <i ng-switch-when="true" class="fa fa-circle-o-notch fa-spin"></i>
               <span class="clickable" ng-hide="branch.name === 'master'" ng-click="clone(branch)">
                 <i class="fa fa-clone"></i>

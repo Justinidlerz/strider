@@ -5,6 +5,7 @@ var branches = global.branches || [];
 var allBranches = global.allBranches || [];
 
 function BranchesController($scope) {
+  $scope.branch_type = 'branch';
   $scope.branchName = '';
   $scope.branches = branches;
   $scope.allBranches = allBranches;

@@ -8928,6 +8928,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
   margin-left: 0;
 }
 #project_config_branches .branch-list .branch-item {
+  position: relative;
   background-color: white;
   padding: 5px 0 5px 0;
   margin-bottom: 5px;
@@ -8938,6 +8939,10 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 #project_config_branches .branch-list .branch-item .branch-name {
   font-weight: bold;
   margin-left: 5px;
+}
+#project_config_branches .branch-list .branch-item .branch-type {
+  position: absolute;
+  left: 180px;
 }
 #project_config_branches .branch-list .branch-item .remove i {
   padding: 0 10px;
